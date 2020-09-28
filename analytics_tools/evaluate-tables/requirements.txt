@@ -1,0 +1,10 @@
+dython==0.5.1
+scipy
+seaborn
+pandas
+numpy
+matplotlib
+tqdm
+scikit-learn
+m2r
+sphinx-rtd-theme

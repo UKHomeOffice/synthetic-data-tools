@@ -1,0 +1,14 @@
+version: "3"
+services:
+  metabase:
+    image: metabase/metabase
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabase_analytics
+      MB_DB_PORT: "${DB_PORT}"
+      MB_DB_USER: "${DB_USER}"
+      MB_DB_PASS: "${DB_PASS}"
+      MB_DB_HOST: "${LOCAL_EC2_IP}"
+    restart: unless-stopped
+    ports:
+      - "8082:3000"

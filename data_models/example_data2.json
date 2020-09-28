@@ -1,0 +1,15 @@
+{
+    "data_id":          ["int_not_cat", "pny_int_opt"],
+    "race":             ["str_cat", "pny_str_opt"],
+    "gender":           ["str_cat", "pny_str_opt"],
+    "event_date":       ["datetime_not_cat", "pny_datetime_opt"],
+    "in_country":       ["str_bool_cat", "pny_bool_opt"],
+    "year":             ["str_cat", "pny_str_req"],
+    "time_precision":   ["int_not_cat", "pny_int_opt"],,
+    "geo_precision":    ["int_cat", "pny_int_opt"],
+    "source":           ["ignore_column", "pny_str_opt"],
+    "notes":            ["ignore_column", "pny_long_str_opt"],
+    "fatalities":       ["int_not_cat", "pny_int_opt"],
+    "timestamp":        ["datetime_not_cat", "pny_datetime_opt"],
+    "iso3":             ["str_cat", "pny_str_opt"]
+}
