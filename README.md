@@ -47,11 +47,11 @@ Useful Commands:
 - 'SELECT COUNT(*) FROM <table_name>;' - Displays count of all rows in table
 
 ## Setup ENV VARS
-export RAW_DATASETS_FOLDER='<absolute_path_to_directory_containing_raw_csv_files>'
-export DB_HOST=127.0.0.1
-export DB_PORT=5432
-export DB_USER=postgres
-export DB_PASS=postgres
+- export RAW_DATASETS_FOLDER='<absolute_path_to_directory_containing_raw_csv_files>'
+- export DB_HOST=127.0.0.1
+- export DB_PORT=5432
+- export DB_USER=postgres
+- export DB_PASS=postgres
 
 ## Deactivate
 To deactivate the Python environment run this command from anywhere:
