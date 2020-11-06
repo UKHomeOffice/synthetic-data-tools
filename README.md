@@ -39,12 +39,12 @@ Then run the following to access postegres with the relevant user:
 - psql -U postgres
 
 Useful Commands:
-'\du' - Lists users
-'\l' - Lists databases
-'\c <db_name>' - Connect to database
-'\dt' - List tables
-'SELECT * FROM <table_name>;' - Displays all rows in table
-'SELECT COUNT(*) FROM <table_name>;' - Displays count of all rows in table
+- '\du' - Lists users
+- '\l' - Lists databases
+- '\c <db_name>' - Connect to database
+- '\dt' - List tables
+- 'SELECT * FROM <table_name>;' - Displays all rows in table
+- 'SELECT COUNT(*) FROM <table_name>;' - Displays count of all rows in table
 
 ## Setup ENV VARS
 export RAW_DATASETS_FOLDER='<absolute_path_to_directory_containing_raw_csv_files>'
