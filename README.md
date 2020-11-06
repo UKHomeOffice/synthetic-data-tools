@@ -14,11 +14,44 @@ Run the following commands to setup a local Python environment on your Mac:
 - source venv/bin/activate
 - pip install -r requirements.txt
 
+## Setup Postgres
 DB SETUP:
 Follow this guide to setup a local instance of Postgres with user 'Postgres' to parse and store information locally with the right permissions:
 https://gist.github.com/ibraheem4/ce5ccd3e4d7a65589ce84f2a3b7c23a3
+
+TL;DR - If you do not want to have to read the above then do the following:
+- brew install postgresql
+- brew services start postgresql
+- psql postgres
+
+To setup the user for synth tools (**not safe for Production**):
+  - postgres=# CREATE ROLE postgres WITH LOGIN PASSWORD 'postgres';
+  - postgres=# ALTER ROLE postgres Superuser;
+
+To setup databases to store data based on what is in config.js:
+  - postgres=# CREATE database raw_datasets;
+  - postgres=# CREATE database input_datasets;
+  - postgres=# CREATE database synth_datasets;
+  - postgres=# CREATE database augmented_synth_datasets;
+  - postgres=# CREATE database pregenerated_datasets;
+
 Then run the following to access postegres with the relevant user:
 - psql -U postgres
+
+Useful Commands:
+'\du' - Lists users
+'\l' - Lists databases
+'\c <db_name>' - Connect to database
+'\dt' - List tables
+'SELECT * FROM <table_name>;' - Displays all rows in table
+'SELECT COUNT(*) FROM <table_name>;' - Displays count of all rows in table
+
+## Setup ENV VARS
+export RAW_DATASETS_FOLDER='<absolute_path_to_directory_containing_raw_csv_files>'
+export DB_HOST=127.0.0.1
+export DB_PORT=5432
+export DB_USER=postgres
+export DB_PASS=postgres
 
 ## Deactivate
 To deactivate the Python environment run this command from anywhere:
